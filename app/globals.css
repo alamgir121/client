@@ -1,0 +1,75 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #f5f8f6;
+  --foreground: #10231c;
+  --card: #ffffff;
+  --card-foreground: #10231c;
+  --popover: #ffffff;
+  --popover-foreground: #10231c;
+  --primary: #0e5a43;
+  --primary-foreground: #ffffff;
+  --secondary: #fbe9b0;
+  --secondary-foreground: #3b2d00;
+  --muted: #e8efeb;
+  --muted-foreground: #4f625a;
+  --accent: #f4b400;
+  --accent-foreground: #2a1f00;
+  --destructive: #c23a22;
+  --border: #d3dfd9;
+  --input: #c4d3cb;
+  --ring: #0e5a43;
+}
+
+.dark {
+  --background: #0a1612;
+  --foreground: #e8f1ed;
+  --card: #12221c;
+  --card-foreground: #e8f1ed;
+  --popover: #12221c;
+  --popover-foreground: #e8f1ed;
+  --primary: #3fbf93;
+  --primary-foreground: #05231a;
+  --secondary: #3a2f0a;
+  --secondary-foreground: #fbe9b0;
+  --muted: #1a2e26;
+  --muted-foreground: #9db3aa;
+  --accent: #f4b400;
+  --accent-foreground: #2a1f00;
+  --destructive: #e5644c;
+  --border: #23382f;
+  --input: #2d463a;
+  --ring: #3fbf93;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  * { border-color: var(--border); }
+  html { scroll-behavior: smooth; }
+  body { background: var(--background); color: var(--foreground); }
+}
