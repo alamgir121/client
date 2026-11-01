@@ -3,7 +3,7 @@ import { useState } from "react";
 import { ImageOff } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-/** Plain <img> (users paste any image URL) with a tidy fallback when the link is broken. */
+
 export function SafeImage({ src, alt, className }: { src: string; alt: string; className?: string }) {
   const [failed, setFailed] = useState(false);
   if (failed || !src) {
@@ -13,6 +13,6 @@ export function SafeImage({ src, alt, className }: { src: string; alt: string; c
       </div>
     );
   }
-  // eslint-disable-next-line @next/next/no-img-element
+
   return <img src={src} alt={alt} loading="lazy" onError={() => setFailed(true)} className={className} />;
 }
