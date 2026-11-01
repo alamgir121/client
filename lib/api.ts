@@ -1,6 +1,6 @@
 import { authClient } from "./auth-client";
 
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+const API = process.env.NEXT_PUBLIC_API_URL ;
 
 
 export async function api<T = unknown>(path: string, options: RequestInit = {}, authed = false): Promise<T> {
