@@ -83,7 +83,7 @@ export default function ManageEventsPage() {
                       <li className="flex gap-2"><Users className="mt-0.5 size-4 shrink-0 text-primary" />{e.joinedCount ?? 0} joined</li>
                     </ul>
                     <div className="mt-auto grid grid-cols-2 gap-3">
-                      <Button variant="outline" onClick={() => setEditing(e)}><Pencil />Update</Button>
+                      <Button variant="outline" onClick={() => setEditing(e)}><Pencil />Edit</Button>
                       <Button variant="destructive" onClick={() => setDeleting(e)}><Trash2 />Delete</Button>
                     </div>
                   </CardContent>
