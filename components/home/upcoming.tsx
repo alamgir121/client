@@ -29,7 +29,7 @@ export function UpcomingSection() {
             <EmptyState title="We couldn't load events" description={error} />
           ) : events === null ? (
             <EventGridSkeleton />
-          ) : events.length === 0 ? (
+          ) : events.length  ===  0 ? (
             <EmptyState title="No upcoming events yet" description="Be the first to organise a drive in your area." actionHref="/create-event" actionLabel="Create an event" />
           ) : (
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
