@@ -46,7 +46,7 @@ export function Hero() {
                     <p className="font-semibold leading-snug">{e.title}</p>
                     <Badge variant="secondary" className="shrink-0">{e.type}</Badge>
                   </div>
-                  <p className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground">
+                  <p  className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground">
                     <span className="flex items-center gap-1.5"><CalendarDays className="size-4" />{formatDate(e.date)}</span>
                     <span className="flex items-center gap-1.5"><MapPin className="size-4" />{e.location}</span>
                   </p>
