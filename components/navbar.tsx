@@ -27,7 +27,7 @@ export function Navbar() {
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const user = session?.user;
-  const initials = (user?.name || "?").trim().slice(0, 2).toUpperCase();
+  const initials =  (user?.name || "?").trim().slice(0, 2).toUpperCase();
 
   async function logout() {
     await authClient.signOut({
