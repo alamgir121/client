@@ -37,7 +37,7 @@ export function Footer() {
           <h3 className="mb-4 font-heading text-base font-bold">Contact</h3>
           <ul className="space-y-3 text-sm text-[#b9d3c8]">
             <li className="flex gap-2"><MapPin className="mt-0.5 size-4 shrink-0" />House 12, Road 5, Bashundhara, Dhaka 1205</li>
-            <li className="flex gap-2"><Mail className="mt-0.5 size-4 shrink-0" />hello@helpinghandsbd.org</li>
+            <li className="flex gap-2"><Mail className="mt-0.5 size-4 shrink-0" />helpinghandsbd@gmail.com</li>
             <li className="flex gap-2"><Phone className="mt-0.5 size-4 shrink-0" />+880 1700 000000</li>
           </ul>
         </div>
