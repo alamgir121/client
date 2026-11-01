@@ -29,7 +29,7 @@ export function Hero() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg"><Link href="/events">Find an event</Link></Button>
-            <Button asChild size="lg" variant="accent"><Link href="/create-event">Organise an event</Link></Button>
+            <Button asChild size="lg" variant="accent"><Link href="/create-event">Create Event</Link></Button>
           </div>
         </div>
 
