@@ -25,7 +25,7 @@ export function Newsletter() {
           <div className="grid items-center gap-8 lg:grid-cols-2">
             <div>
               <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl">Get the weekend round-up</h2>
-              <p className="mt-3 text-base leading-relaxed opacity-90 sm:text-lg">One short email every Thursday with the events happening near you.</p>
+              <p className="mt-3 text-base leading-relaxed opacity-90 sm:text-lg">Discover exciting events near you with our weekly Thursday newsletter</p>
             </div>
             <form onSubmit={submit} className="flex flex-col gap-3 sm:flex-row" noValidate>
               <Input
