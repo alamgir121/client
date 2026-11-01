@@ -21,7 +21,7 @@ export function Features() {
               <CardContent className="p-6">
                 <span className="flex size-12 items-center justify-center rounded-lg bg-secondary text-secondary-foreground"><Icon className="size-6" /></span>
                 <h3 className="mt-5 font-heading text-lg font-bold">{title}</h3>
-                <p className="mt-2 leading-relaxed text-muted-foreground">{text}</p>
+                <p  className="mt-2 leading-relaxed text-muted-foreground">{text}</p>
               </CardContent>
             </Card>
           ))}
