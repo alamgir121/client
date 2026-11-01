@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Container } from "@/components/container";
 import { validateEmail } from "@/lib/validation";
 
-// Design-only section: the form validates but does not store the address.
+
 export function Newsletter() {
   const [email, setEmail] = useState("");
 
