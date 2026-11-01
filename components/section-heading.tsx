@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-/** One heading style for every section and page title. */
+
 export function SectionHeading({
   title, description, className, as: Tag = "h2",
 }: { title: string; description?: string; className?: string; as?: "h1" | "h2" }) {
