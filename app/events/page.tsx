@@ -31,7 +31,7 @@ export default function EventsPage() {
 
   return (
     <Container className="py-12">
-      <SectionHeading as="h1" title="Upcoming events" description="Every event that hasn't happened yet, soonest first." />
+      <SectionHeading as="h1" title="Upcoming events"  />
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
         <div className="relative flex-1">
           <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
