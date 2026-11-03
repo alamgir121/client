@@ -1,9 +1,8 @@
 import { authClient } from "./auth-client";
 
-/** Same-origin proxy defined in next.config.ts (rewrites -> the Express API). */
 const PROXY_BASE = process.env.NEXT_PUBLIC_API_URL || "https://helping-hands-server-tau.vercel.app";
 
-//export const API_BASE = () => PROXY_BASE;
+
 
 async function attempt(path: string, options: RequestInit, headers: Record<string, string>) {
   return fetch(`${PROXY_BASE}${path}`, { ...options, headers, cache: "no-store" });
@@ -22,7 +21,7 @@ export async function api<T = unknown>(path: string, options: RequestInit = {}, 
   try {
     res = await attempt(path, options, headers);
   } catch (first) {
-    // Retry once on a network blip, but only for idempotent reads.
+    
     if (method !== "GET") {
       console.error(`[api] ${method} ${path} failed:`, first);
       throw new Error("We couldn't reach the server. Check your connection and try again.");
@@ -38,7 +37,7 @@ export async function api<T = unknown>(path: string, options: RequestInit = {}, 
   const body = await res.json().catch(() => ({} as { message?: string }));
   if (!res.ok) {
     if (body.message) throw new Error(body.message);
-    // Non-JSON error (e.g. Vercel 504/500 page): the API is up but failing.
+   
     throw new Error(
       res.status >= 500
         ? `The server had a problem (HTTP ${res.status}). Please try again in a moment.`
