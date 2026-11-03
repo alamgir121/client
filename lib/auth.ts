@@ -18,6 +18,16 @@ export const auth = betterAuth({
   secret: process.env.BETTER_AUTH_SECRET,
   database: mongodbAdapter(db),
   emailAndPassword: { enabled: true, minPasswordLength: 6 },
+  account: {
+    accountLinking: {
+      // This app has no email-verification flow (no emails are sent), so
+      // email/password users always have emailVerified: false. Without this,
+      // Better Auth refuses to link a GitHub login to an existing
+      // email/password account and throws "account_not_linked".
+      // GitHub emails are already verified on GitHub's side.
+      requireLocalEmailVerified: false,
+    },
+  },
   socialProviders: {
     github: {
       clientId: process.env.GITHUB_CLIENT_ID || "",
